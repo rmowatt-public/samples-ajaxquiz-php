@@ -19,8 +19,8 @@ class MowattMedia_Application_Db {
 
 	private static $dbInstance = null;
 	protected $_host = 'localhost';
-	protected $_userName = 'mowattme_all';
-	protected $_password = 'pouncer12';
+	protected $_userName = '';
+	protected $_password = '';
 	protected $_dbName = 'mowattme_quiz';
 	protected $_profiler = true;
 	protected $_tableName;
