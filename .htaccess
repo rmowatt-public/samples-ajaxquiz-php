@@ -1,0 +1,17 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^(wp) - [L]
+RewriteRule ^(morris) - [L]
+RewriteRule ^(goldenjewelblog) - [L]
+RewriteRule ^(aloha) - [L]
+RewriteRule ^(blog) - [L]
+RewriteRule ^(assets) - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(/)$
+RewriteRule (.*)$ /$1/ [R,L]
+
+RewriteCond %{SCRIPT_FILENAME} !\.(js|ico|txt|gif|jpg|png|css|swf|zip)$ [NC] 
+RewriteRule ^(.*)/ index.php?controller=$1 [L]
+RewriteRule !(\.) index.php?controller=$1 [L]
